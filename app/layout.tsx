@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
 export const metadata: Metadata = {
   title: "NoteHub",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     title: "NoteHub",
     description:
       "NoteHub is a simple and efficient application designed for managing personal notes",
-    url: "https://08-zustand-iota-nine.vercel.app/",
+    url: "https://09-auth-bice.vercel.app/",
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
@@ -43,10 +44,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.variable}>
         <TanStackProvider>
-          <Header />
-          <main>{children}</main>
-          {modal}
-          <Footer />
+          <AuthProvider>
+            <Header />
+            <main>{children}</main>
+            {modal}
+            <Footer />
+          </AuthProvider>
         </TanStackProvider>
       </body>
     </html>
