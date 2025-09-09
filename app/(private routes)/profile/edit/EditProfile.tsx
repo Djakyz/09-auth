@@ -37,7 +37,7 @@ export default function EditProfile({ user }: UserProps) {
     <>
       {user.avatar && (
         <Image
-          src={user.avatar || "/default-avatar.webp"}
+          src={"/default-avatar.webp"}
           alt="User Avatar"
           width={120}
           height={120}

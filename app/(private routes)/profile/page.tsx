@@ -31,7 +31,7 @@ export default async function ProfilePage() {
         <div className={css.avatarWrapper}>
           {user.avatar && (
             <Image
-              src="Avatar"
+              src="/default-avatar.webp"
               alt="User Avatar"
               width={120}
               height={120}
