@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { getServerMe } from "@/lib/api/serverApi";
 import Image from "next/image";
-import { BASE_URL } from "@/lib/api";
+import { BASE_URL } from "@/lib/api/api";
 
 export async function generateMetadata(): Promise<Metadata> {
   const user = await getServerMe();

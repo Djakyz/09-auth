@@ -2,7 +2,7 @@ import { getServerMe } from "@/lib/api/serverApi";
 import css from "./EditProfilePage.module.css";
 import { Metadata } from "next";
 import EditProfile from "@/app/(private routes)/profile/edit/EditProfile";
-import { BASE_URL } from "@/lib/api";
+import { BASE_URL } from "@/lib/api/api";
 
 export async function generateMetadata(): Promise<Metadata> {
   const user = await getServerMe();
